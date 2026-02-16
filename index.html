@@ -1,107 +1,162 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Utkarsh Upadhyay | Resume</title>
+  <title>Utkarsh Upadhyay | Personal Website</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <style>
     body {
-      font-family: Arial, sans-serif;
       margin: 0;
-      background-color: #0f172a;
+      font-family: 'Segoe UI', sans-serif;
+      background: #0f172a;
       color: #f1f5f9;
-      line-height: 1.6;
     }
+
+    nav {
+      display: flex;
+      justify-content: space-between;
+      padding: 20px 40px;
+      background: #1e293b;
+    }
+
+    nav h2 {
+      margin: 0;
+    }
+
+    nav a {
+      color: #38bdf8;
+      text-decoration: none;
+      margin-left: 20px;
+      font-weight: 500;
+    }
+
     header {
       text-align: center;
-      padding: 40px;
-      background: #1e293b;
+      padding: 100px 20px;
     }
-    h1 {
-      margin: 0;
-      font-size: 36px;
+
+    header h1 {
+      font-size: 48px;
+      margin-bottom: 10px;
     }
+
+    header p {
+      font-size: 20px;
+      color: #94a3b8;
+    }
+
+    .btn {
+      display: inline-block;
+      margin-top: 20px;
+      padding: 12px 25px;
+      background: #38bdf8;
+      color: #0f172a;
+      border-radius: 8px;
+      text-decoration: none;
+      font-weight: bold;
+    }
+
     section {
-      padding: 40px;
-      max-width: 900px;
+      padding: 60px 20px;
+      max-width: 1000px;
       margin: auto;
     }
+
     h2 {
+      margin-bottom: 20px;
       border-bottom: 2px solid #38bdf8;
-      padding-bottom: 10px;
+      display: inline-block;
+      padding-bottom: 5px;
     }
+
     .card {
       background: #1e293b;
-      padding: 20px;
+      padding: 25px;
       margin-top: 20px;
-      border-radius: 10px;
+      border-radius: 12px;
+      transition: 0.3s;
     }
+
+    .card:hover {
+      transform: translateY(-5px);
+    }
+
     footer {
       text-align: center;
-      padding: 20px;
+      padding: 30px;
       background: #1e293b;
-      margin-top: 40px;
+      margin-top: 50px;
+      color: #94a3b8;
     }
   </style>
 </head>
 
 <body>
 
+<nav>
+  <h2>Utkarsh</h2>
+  <div>
+    <a href="#about">About</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="#skills">Skills</a>
+  </div>
+</nav>
+
 <header>
   <h1>Utkarsh Upadhyay</h1>
-  <p>New Delhi | +91-9560650175 | upadhyayupadhyay01002@gmail.com</p>
+  <p>B.Com (Hons.) Student | JLPT N4 Certified | Business & Marketing Enthusiast</p>
+  <a href="#contact" class="btn">Contact Me</a>
 </header>
 
-<section>
+<section id="about">
   <h2>About Me</h2>
   <div class="card">
-    <p>I am a hardworking, honest and motivated individual who is always willing to learn new skills. 
-    I can work independently in busy environments and listen effectively when solving problems.</p>
+    I am a hardworking and honest individual who is always willing to learn new skills.
+    I can work independently in busy environments and solve problems effectively.
   </div>
 </section>
 
-<section>
+<section id="education">
   <h2>Education</h2>
   <div class="card">
-    <p><strong>B.Com (Hons.)</strong> – Delhi University (School of Open Learning) – 1st Year</p>
-    <p><strong>XII (ICSE)</strong></p>
-    <p><strong>JLPT N4 & N5</strong> – Cleared in 2023</p>
+    <strong>B.Com (Hons.)</strong> – Delhi University (School of Open Learning)<br><br>
+    <strong>JLPT N4 & N5</strong> – Cleared in 2023<br><br>
+    ICSE – Class XII
   </div>
 </section>
 
-<section>
-  <h2>Work Experience</h2>
+<section id="experience">
+  <h2>Experience</h2>
   <div class="card">
-    <p><strong>Zero Plus India Pvt. Ltd.</strong> (July 2021 – June 2024)</p>
-    <ul>
-      <li>Preparation of MIS and Cash Reports</li>
-      <li>Maintenance of Administrative Records</li>
-      <li>Inventory Management</li>
-    </ul>
+    <strong>Zero Plus India Pvt. Ltd. (2021–2024)</strong><br><br>
+    • MIS & Cash Reports Preparation<br>
+    • Admin Record Maintenance<br>
+    • Inventory Management
   </div>
 </section>
 
-<section>
+<section id="skills">
   <h2>Skills</h2>
   <div class="card">
-    <ul>
-      <li>Fluent in English and Japanese</li>
-      <li>MS Office</li>
-      <li>Content Writing</li>
-      <li>Creative Writing</li>
-      <li>Search Engine Optimization (SEO)</li>
-      <li>Analytical and Future-Oriented Thinker</li>
-    </ul>
+    • Fluent English & Japanese<br>
+    • MS Office<br>
+    • Content Writing<br>
+    • SEO<br>
+    • Creative & Analytical Thinking
   </div>
 </section>
 
-<section>
-  <h2>Languages</h2>
+<section id="contact">
+  <h2>Contact</h2>
   <div class="card">
-    <p>English | Hindi | Japanese</p>
+    Email: upadhyayupadhyay01002@gmail.com<br>
+    Phone: +91-9560650175<br>
+    Location: New Delhi
   </div>
 </section>
 
 <footer>
-  <p>© 2026 Utkarsh Upadhyay</p>
+  © 2026 Utkarsh Upadhyay
 </footer>
 
 </body>
