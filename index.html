@@ -1,11 +1,10 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Utkarsh Upadhyay | Portfolio</title>
+  <title>Utkarsh Upadhyay | Content Writer</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <!-- Google Font -->
-  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
   <style>
     * {
@@ -13,127 +12,98 @@
       padding: 0;
       box-sizing: border-box;
       scroll-behavior: smooth;
-      font-family: 'Poppins', sans-serif;
+      font-family: 'Inter', sans-serif;
     }
 
     body {
-      background: #0f172a;
-      color: white;
-      overflow-x: hidden;
-    }
-
-    /* Floating Particles */
-    #particles-js {
-      position: fixed;
-      width: 100%;
-      height: 100%;
-      z-index: -1;
+      background: #f9fafb;
+      color: #1f2937;
+      line-height: 1.7;
     }
 
     nav {
-      position: fixed;
-      width: 100%;
-      padding: 20px 50px;
       display: flex;
       justify-content: space-between;
-      backdrop-filter: blur(10px);
-      background: rgba(0,0,0,0.4);
-      z-index: 1000;
+      padding: 20px 60px;
+      background: white;
+      border-bottom: 1px solid #e5e7eb;
     }
 
     nav a {
-      color: #38bdf8;
       text-decoration: none;
-      margin-left: 20px;
+      color: #374151;
+      margin-left: 25px;
       font-weight: 500;
     }
 
     header {
-      height: 100vh;
-      display: flex;
-      flex-direction: column;
-      justify-content: center;
-      align-items: center;
       text-align: center;
-      padding: 20px;
+      padding: 80px 20px 60px;
+      background: white;
     }
 
-    /* Neon Profile Circle */
     .profile {
-      width: 150px;
-      height: 150px;
+      width: 160px;
+      height: 160px;
       border-radius: 50%;
-      padding: 5px;
-      background: linear-gradient(45deg, #38bdf8, #a855f7);
-      animation: rotate 6s linear infinite;
+      overflow: hidden;
+      margin: auto;
+      box-shadow: 0 8px 25px rgba(0,0,0,0.1);
     }
 
     .profile img {
       width: 100%;
       height: 100%;
-      border-radius: 50%;
       object-fit: cover;
-      background: #111;
-    }
-
-    @keyframes rotate {
-      0% { filter: hue-rotate(0deg); }
-      100% { filter: hue-rotate(360deg); }
     }
 
     header h1 {
+      font-family: 'Playfair Display', serif;
+      font-size: 40px;
       margin-top: 20px;
-      font-size: 50px;
-      background: linear-gradient(90deg, #38bdf8, #a855f7);
-      -webkit-background-clip: text;
-      -webkit-text-fill-color: transparent;
     }
 
-    .typing {
+    header p {
       margin-top: 10px;
-      font-size: 20px;
-      color: #94a3b8;
+      font-size: 18px;
+      color: #6b7280;
     }
 
     section {
-      padding: 100px 20px;
-      max-width: 1100px;
+      max-width: 900px;
       margin: auto;
+      padding: 60px 20px;
     }
 
     h2 {
-      text-align: center;
-      margin-bottom: 40px;
-      font-size: 30px;
+      font-family: 'Playfair Display', serif;
+      font-size: 28px;
+      margin-bottom: 20px;
+      border-bottom: 2px solid #111;
+      display: inline-block;
+      padding-bottom: 5px;
     }
 
-    /* Glowing Cards */
     .card {
-      background: #111827;
-      padding: 30px;
-      border-radius: 20px;
-      margin-bottom: 30px;
-      border: 1px solid rgba(56,189,248,0.2);
-      box-shadow: 0 0 20px rgba(56,189,248,0.2);
-      transition: 0.4s;
-      opacity: 0;
-      transform: translateY(40px);
+      margin-top: 20px;
     }
 
-    .card.show {
-      opacity: 1;
-      transform: translateY(0);
-    }
-
-    .card:hover {
-      box-shadow: 0 0 30px rgba(168,85,247,0.6);
-      transform: translateY(-10px);
+    ul {
+      padding-left: 20px;
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: rgba(0,0,0,0.5);
+      background: #111;
+      color: white;
+      margin-top: 50px;
+    }
+
+    @media (max-width: 768px) {
+      nav {
+        padding: 20px;
+      }
     }
 
   </style>
@@ -141,123 +111,71 @@
 
 <body>
 
-<div id="particles-js"></div>
-
 <nav>
-  <div><strong>Utkarsh</strong></div>
+  <div><strong>Utkarsh Upadhyay</strong></div>
   <div>
     <a href="#about">About</a>
-    <a href="#projects">Projects</a>
+    <a href="#experience">Experience</a>
     <a href="#skills">Skills</a>
+    <a href="#contact">Contact</a>
   </div>
 </nav>
 
 <header>
   <div class="profile">
-    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+    <img src="your-photo.jpg" alt="Utkarsh Upadhyay">
   </div>
   <h1>Utkarsh Upadhyay</h1>
-  <div class="typing" id="typing"></div>
+  <p>Content Writer | Creative Thinker | JLPT N4 Certified</p>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
   <div class="card">
-    B.Com (Hons.) student from Delhi University. JLPT N4 certified.
-    Passionate about business, marketing and building future-ready skills.
+    <p>
+      I am a B.Com (Hons.) student from Delhi University with a strong interest in content writing, creative expression, and analytical thinking. 
+      I enjoy transforming ideas into structured, engaging, and meaningful content.
+    </p>
   </div>
 </section>
 
-<section id="projects">
-  <h2>Projects</h2>
+<section id="experience">
+  <h2>Professional Experience</h2>
   <div class="card">
-    <strong>KITSU (Anime Clothing Brand)</strong><br><br>
-    Working on building an anime-inspired clothing brand focused on youth culture and creative branding.
-  </div>
-  <div class="card">
-    <strong>SEO & Content Writing Projects</strong><br><br>
-    Developed content strategies and optimized search visibility.
+    <strong>Zero Plus India Pvt. Ltd. (2021–2024)</strong>
+    <ul>
+      <li>Prepared MIS and cash reports</li>
+      <li>Maintained administrative records</li>
+      <li>Handled inventory management</li>
+    </ul>
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="card">
-    • English & Japanese (JLPT N4)<br>
-    • MS Office<br>
-    • SEO & Content Writing<br>
-    • Analytical Thinking
+    <ul>
+      <li>Content Writing & Creative Writing</li>
+      <li>Search Engine Optimization (SEO)</li>
+      <li>MS Office</li>
+      <li>Fluent in English & Japanese (JLPT N4)</li>
+      <li>Analytical & Future-Oriented Thinking</li>
+    </ul>
+  </div>
+</section>
+
+<section id="contact">
+  <h2>Contact</h2>
+  <div class="card">
+    <p>Email: upadhyayupadhyay01002@gmail.com</p>
+    <p>Phone: +91-9560650175</p>
+    <p>Location: New Delhi, India</p>
   </div>
 </section>
 
 <footer>
-  © 2026 Utkarsh Upadhyay | New Delhi
+  © 2026 Utkarsh Upadhyay
 </footer>
-
-<!-- Typing Animation -->
-<script>
-  const texts = [
-    "Business & Marketing Enthusiast",
-    "Future Entrepreneur",
-    "Creative Thinker"
-  ];
-
-  let i = 0, j = 0, current = "", isDeleting = false;
-
-  function type() {
-    if (i >= texts.length) i = 0;
-    current = texts[i];
-
-    if (!isDeleting) {
-      document.getElementById("typing").textContent = current.slice(0, j++);
-      if (j > current.length) {
-        isDeleting = true;
-        setTimeout(type, 1000);
-        return;
-      }
-    } else {
-      document.getElementById("typing").textContent = current.slice(0, j--);
-      if (j === 0) {
-        isDeleting = false;
-        i++;
-      }
-    }
-    setTimeout(type, isDeleting ? 50 : 100);
-  }
-  type();
-</script>
-
-<!-- Scroll Reveal -->
-<script>
-  const cards = document.querySelectorAll(".card");
-
-  function reveal() {
-    const trigger = window.innerHeight * 0.85;
-    cards.forEach(card => {
-      const top = card.getBoundingClientRect().top;
-      if (top < trigger) {
-        card.classList.add("show");
-      }
-    });
-  }
-
-  window.addEventListener("scroll", reveal);
-  reveal();
-</script>
-
-<!-- Particles Library -->
-<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
-<script>
-particlesJS("particles-js", {
-  particles: {
-    number: { value: 60 },
-    size: { value: 3 },
-    color: { value: "#38bdf8" },
-    line_linked: { enable: true, color: "#38bdf8" },
-    move: { speed: 1 }
-  }
-});
-</script>
 
 </body>
 </html>
