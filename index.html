@@ -1,25 +1,44 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>Utkarsh Upadhyay | Personal Website</title>
+  <title>Utkarsh Upadhyay | Portfolio</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <!-- Google Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;500;700&display=swap" rel="stylesheet">
+
   <style>
-    body {
+    * {
       margin: 0;
-      font-family: 'Segoe UI', sans-serif;
+      padding: 0;
+      box-sizing: border-box;
+      scroll-behavior: smooth;
+      font-family: 'Poppins', sans-serif;
+    }
+
+    body {
       background: #0f172a;
-      color: #f1f5f9;
+      color: white;
+      overflow-x: hidden;
+    }
+
+    /* Floating Particles */
+    #particles-js {
+      position: fixed;
+      width: 100%;
+      height: 100%;
+      z-index: -1;
     }
 
     nav {
+      position: fixed;
+      width: 100%;
+      padding: 20px 50px;
       display: flex;
       justify-content: space-between;
-      padding: 20px 40px;
-      background: #1e293b;
-    }
-
-    nav h2 {
-      margin: 0;
+      backdrop-filter: blur(10px);
+      background: rgba(0,0,0,0.4);
+      z-index: 1000;
     }
 
     nav a {
@@ -30,134 +49,215 @@
     }
 
     header {
+      height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
       text-align: center;
-      padding: 100px 20px;
+      padding: 20px;
+    }
+
+    /* Neon Profile Circle */
+    .profile {
+      width: 150px;
+      height: 150px;
+      border-radius: 50%;
+      padding: 5px;
+      background: linear-gradient(45deg, #38bdf8, #a855f7);
+      animation: rotate 6s linear infinite;
+    }
+
+    .profile img {
+      width: 100%;
+      height: 100%;
+      border-radius: 50%;
+      object-fit: cover;
+      background: #111;
+    }
+
+    @keyframes rotate {
+      0% { filter: hue-rotate(0deg); }
+      100% { filter: hue-rotate(360deg); }
     }
 
     header h1 {
-      font-size: 48px;
-      margin-bottom: 10px;
+      margin-top: 20px;
+      font-size: 50px;
+      background: linear-gradient(90deg, #38bdf8, #a855f7);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
     }
 
-    header p {
+    .typing {
+      margin-top: 10px;
       font-size: 20px;
       color: #94a3b8;
     }
 
-    .btn {
-      display: inline-block;
-      margin-top: 20px;
-      padding: 12px 25px;
-      background: #38bdf8;
-      color: #0f172a;
-      border-radius: 8px;
-      text-decoration: none;
-      font-weight: bold;
-    }
-
     section {
-      padding: 60px 20px;
-      max-width: 1000px;
+      padding: 100px 20px;
+      max-width: 1100px;
       margin: auto;
     }
 
     h2 {
-      margin-bottom: 20px;
-      border-bottom: 2px solid #38bdf8;
-      display: inline-block;
-      padding-bottom: 5px;
+      text-align: center;
+      margin-bottom: 40px;
+      font-size: 30px;
     }
 
+    /* Glowing Cards */
     .card {
-      background: #1e293b;
-      padding: 25px;
-      margin-top: 20px;
-      border-radius: 12px;
-      transition: 0.3s;
+      background: #111827;
+      padding: 30px;
+      border-radius: 20px;
+      margin-bottom: 30px;
+      border: 1px solid rgba(56,189,248,0.2);
+      box-shadow: 0 0 20px rgba(56,189,248,0.2);
+      transition: 0.4s;
+      opacity: 0;
+      transform: translateY(40px);
+    }
+
+    .card.show {
+      opacity: 1;
+      transform: translateY(0);
     }
 
     .card:hover {
-      transform: translateY(-5px);
+      box-shadow: 0 0 30px rgba(168,85,247,0.6);
+      transform: translateY(-10px);
     }
 
     footer {
       text-align: center;
       padding: 30px;
-      background: #1e293b;
-      margin-top: 50px;
-      color: #94a3b8;
+      background: rgba(0,0,0,0.5);
     }
+
   </style>
 </head>
 
 <body>
 
+<div id="particles-js"></div>
+
 <nav>
-  <h2>Utkarsh</h2>
+  <div><strong>Utkarsh</strong></div>
   <div>
     <a href="#about">About</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
+    <a href="#projects">Projects</a>
     <a href="#skills">Skills</a>
   </div>
 </nav>
 
 <header>
+  <div class="profile">
+    <img src="https://via.placeholder.com/150" alt="Profile Photo">
+  </div>
   <h1>Utkarsh Upadhyay</h1>
-  <p>B.Com (Hons.) Student | JLPT N4 Certified | Business & Marketing Enthusiast</p>
-  <a href="#contact" class="btn">Contact Me</a>
+  <div class="typing" id="typing"></div>
 </header>
 
 <section id="about">
   <h2>About Me</h2>
   <div class="card">
-    I am a hardworking and honest individual who is always willing to learn new skills.
-    I can work independently in busy environments and solve problems effectively.
+    B.Com (Hons.) student from Delhi University. JLPT N4 certified.
+    Passionate about business, marketing and building future-ready skills.
   </div>
 </section>
 
-<section id="education">
-  <h2>Education</h2>
+<section id="projects">
+  <h2>Projects</h2>
   <div class="card">
-    <strong>B.Com (Hons.)</strong> – Delhi University (School of Open Learning)<br><br>
-    <strong>JLPT N4 & N5</strong> – Cleared in 2023<br><br>
-    ICSE – Class XII
+    <strong>KITSU (Anime Clothing Brand)</strong><br><br>
+    Working on building an anime-inspired clothing brand focused on youth culture and creative branding.
   </div>
-</section>
-
-<section id="experience">
-  <h2>Experience</h2>
   <div class="card">
-    <strong>Zero Plus India Pvt. Ltd. (2021–2024)</strong><br><br>
-    • MIS & Cash Reports Preparation<br>
-    • Admin Record Maintenance<br>
-    • Inventory Management
+    <strong>SEO & Content Writing Projects</strong><br><br>
+    Developed content strategies and optimized search visibility.
   </div>
 </section>
 
 <section id="skills">
   <h2>Skills</h2>
   <div class="card">
-    • Fluent English & Japanese<br>
+    • English & Japanese (JLPT N4)<br>
     • MS Office<br>
-    • Content Writing<br>
-    • SEO<br>
-    • Creative & Analytical Thinking
-  </div>
-</section>
-
-<section id="contact">
-  <h2>Contact</h2>
-  <div class="card">
-    Email: upadhyayupadhyay01002@gmail.com<br>
-    Phone: +91-9560650175<br>
-    Location: New Delhi
+    • SEO & Content Writing<br>
+    • Analytical Thinking
   </div>
 </section>
 
 <footer>
-  © 2026 Utkarsh Upadhyay
+  © 2026 Utkarsh Upadhyay | New Delhi
 </footer>
+
+<!-- Typing Animation -->
+<script>
+  const texts = [
+    "Business & Marketing Enthusiast",
+    "Future Entrepreneur",
+    "Creative Thinker"
+  ];
+
+  let i = 0, j = 0, current = "", isDeleting = false;
+
+  function type() {
+    if (i >= texts.length) i = 0;
+    current = texts[i];
+
+    if (!isDeleting) {
+      document.getElementById("typing").textContent = current.slice(0, j++);
+      if (j > current.length) {
+        isDeleting = true;
+        setTimeout(type, 1000);
+        return;
+      }
+    } else {
+      document.getElementById("typing").textContent = current.slice(0, j--);
+      if (j === 0) {
+        isDeleting = false;
+        i++;
+      }
+    }
+    setTimeout(type, isDeleting ? 50 : 100);
+  }
+  type();
+</script>
+
+<!-- Scroll Reveal -->
+<script>
+  const cards = document.querySelectorAll(".card");
+
+  function reveal() {
+    const trigger = window.innerHeight * 0.85;
+    cards.forEach(card => {
+      const top = card.getBoundingClientRect().top;
+      if (top < trigger) {
+        card.classList.add("show");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", reveal);
+  reveal();
+</script>
+
+<!-- Particles Library -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js"></script>
+<script>
+particlesJS("particles-js", {
+  particles: {
+    number: { value: 60 },
+    size: { value: 3 },
+    color: { value: "#38bdf8" },
+    line_linked: { enable: true, color: "#38bdf8" },
+    move: { speed: 1 }
+  }
+});
+</script>
 
 </body>
 </html>
